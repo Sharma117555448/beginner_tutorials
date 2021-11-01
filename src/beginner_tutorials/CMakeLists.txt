@@ -48,20 +48,20 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-add_message_files(
-  DIRECTORY
-  FILES
-  msg
-  Num.msg
-)
+# add_message_files(
+#   DIRECTORY
+#   FILES
+#   msg
+#   Num.msg
+# )
 
-## Generate services in the 'srv' folder
-add_service_files(DIRECTORY
-  DIRECTORY
-  srv
-  FILES
-  AddTwoInts.srv
-)
+# ## Generate services in the 'srv' folder
+# add_service_files(DIRECTORY
+#   DIRECTORY
+#   srv
+#   FILES
+#   AddTwoInts.srv
+# )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -71,10 +71,10 @@ add_service_files(DIRECTORY
 # )
 
 ## Generate added messages and services with any dependencies listed here
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-)
+# generate_messages(
+#   DEPENDENCIES
+#   std_msgs
+# )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -155,11 +155,11 @@ include_directories(
 
 add_executable(talker src/talker.cpp)
 target_link_libraries(talker ${catkin_LIBRARIES})
-add_dependencies(talker beginner_tutorials_generate_messages_cpp)
+# add_dependencies(talker beginner_tutorials_generate_messages_cpp)
 
 add_executable(listener src/listener.cpp)
 target_link_libraries(listener ${catkin_LIBRARIES})
-add_dependencies(listener beginner_tutorials_generate_messages_cpp)
+# add_dependencies(listener beginner_tutorials_generate_messages_cpp)
 
 #############
 ## Install ##
