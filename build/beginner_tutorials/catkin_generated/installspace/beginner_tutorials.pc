@@ -1,4 +1,4 @@
-prefix=/home/charu/catkin_ws/install
+prefix=/home/charu/beginner_tutorials/install
 
 Name: beginner_tutorials
 Description: Description of beginner_tutorials

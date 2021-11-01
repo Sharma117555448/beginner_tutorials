@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/charu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/charu/beginner_tutorials/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/charu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/charu/beginner_tutorials/build
 
 # Utility rule file for roscpp_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ beginner_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir/build: roscpp_
 .PHONY : beginner_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 
 beginner_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
-	cd /home/charu/catkin_ws/build/beginner_tutorials && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/charu/beginner_tutorials/build/beginner_tutorials && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : beginner_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 
 beginner_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend:
-	cd /home/charu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/charu/catkin_ws/src /home/charu/catkin_ws/src/beginner_tutorials /home/charu/catkin_ws/build /home/charu/catkin_ws/build/beginner_tutorials /home/charu/catkin_ws/build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/charu/beginner_tutorials/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/charu/beginner_tutorials/src /home/charu/beginner_tutorials/src/beginner_tutorials /home/charu/beginner_tutorials/build /home/charu/beginner_tutorials/build/beginner_tutorials /home/charu/beginner_tutorials/build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : beginner_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
 

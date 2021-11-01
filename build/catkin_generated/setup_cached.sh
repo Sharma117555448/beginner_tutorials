@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/charu/catkin_ws/build'
+export PWD='/home/charu/beginner_tutorials/build'
