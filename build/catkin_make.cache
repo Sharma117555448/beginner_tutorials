@@ -1,2 +1,2 @@
 beginner_tutorials
--DCATKIN_DEVEL_PREFIX=/home/charu/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/charu/catkin_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/charu/beginner_tutorials/devel -DCMAKE_INSTALL_PREFIX=/home/charu/beginner_tutorials/install -G Unix Makefiles
