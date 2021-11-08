@@ -1,5 +1,12 @@
-// Copyright (c) 2021 Charu Sharma
-
+/**
+ * @file listener.cpp
+ * @author Charu Sharma (charu107@umd.edu)
+ * @brief ROS Subscriber to listen to a topic
+ * @version 0.
+ * @date 2021-11-08
+ *
+ * @copyright Copyright (c) 2021
+ */
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 
@@ -7,7 +14,7 @@
  * This tutorial demonstrates simple receipt of messages over the ROS system.
  */
 void chatterCallback(const std_msgs::String::ConstPtr& msg) {
-  ROS_INFO("heard: [%s]", msg->data.c_str());
+  ROS_INFO("Hearing: [%s]", msg->data.c_str());
 }
 
 int main(int argc, char **argv) {
