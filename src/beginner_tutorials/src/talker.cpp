@@ -14,7 +14,7 @@ extern std::string str = "ENPM808X";
 bool change(beginner_tutorials::change_string::Request &req,
             beginner_tutorials::change_string::Response &res) {
   res.output_string = req.input_string;
-  // str = res.output_string;
+  str = res.output_string;
   return true;
 }
 
@@ -57,7 +57,8 @@ int main(int argc, char **argv) {
    */
   ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
   ros::ServiceServer service = n.advertiseService("change_string", change);
-  ros::Rate loop_rate(10);
+  int freq = atoi(argv[1]);
+  ros::Rate loop_rate(freq);
 
   /**
    * A count of how many messages we have sent. This is used to create
@@ -65,6 +66,7 @@ int main(int argc, char **argv) {
    */
   int count = 0;
   while (ros::ok()) {
+    ROS_DEBUG_STREAM("Publishing frequency provided- " << freq);
     /**
      * This is a message object. You stuff it with data, and then publish it.
      */
