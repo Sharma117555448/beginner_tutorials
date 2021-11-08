@@ -63,9 +63,6 @@ int main(int argc, char **argv) {
     std::stringstream ss;
     msg.data = ss.str();
 
-    // if (msg.data.c_str() % 2 == 0) {
-    //   ROS_INFO_STREAM("New ");
-    // }
     for (int i = 1; ros::ok(); i ++) {
       ROS_DEBUG_STREAM("Count begin");
       if ((i % 2) == 0) {
@@ -83,8 +80,6 @@ int main(int argc, char **argv) {
 
     ss << count;
     msg.data = ss.str();
-
-    // ROS_INFO("%s", msg.data.c_str());
 
     /**
      * The publish() function is how you send messages. The parameter
