@@ -61,10 +61,30 @@ int main(int argc, char **argv) {
     std_msgs::String msg;
 
     std::stringstream ss;
-    ss << "Counting up: " << count;
     msg.data = ss.str();
 
-    ROS_INFO("%s", msg.data.c_str());
+    // if (msg.data.c_str() % 2 == 0) {
+    //   ROS_INFO_STREAM("New ");
+    // }
+    for (int i = 1; ros::ok(); i ++) {
+      ROS_DEBUG_STREAM("Count begin");
+      if ((i % 2) == 0) {
+        ROS_INFO_STREAM(i << " Stats are even ");
+      }
+      if ((i % 10) == 0) {
+        ROS_WARN_STREAM(i << " Stats enclosing for each deste");
+      }
+      if ((i % 12) == 0) {
+        ROS_ERROR_STREAM(i << " Stats enclosing for each dozen");
+      }
+      if ((i % 30) == 0) {
+        ROS_FATAL_STREAM(i << " Stats enclosing for each dozen");
+      }
+
+    ss << count;
+    msg.data = ss.str();
+
+    // ROS_INFO("%s", msg.data.c_str());
 
     /**
      * The publish() function is how you send messages. The parameter
@@ -79,7 +99,7 @@ int main(int argc, char **argv) {
     loop_rate.sleep();
     ++count;
   }
-
+  }
 
   return 0;
 }
