@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "message_runtime".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "beginner_tutorials"
 PROJECT_SPACE_DIR = "/home/charu/beginner_tutorials/install"
-PROJECT_VERSION = "0.1.0"
+PROJECT_VERSION = "0.2.0"

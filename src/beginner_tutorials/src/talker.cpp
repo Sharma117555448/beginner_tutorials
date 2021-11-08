@@ -26,14 +26,14 @@ OTHER DEALINGS IN THE SOFTWARE.
  * @version 0.2
  * @date 2021-11-08
  */
+
 #include <ros/ros.h>
 #include <std_msgs/String.h>
+#include <sstream>
 #include "beginner_tutorials/change_string.h"
 
 // Initializing the string
 extern std::string str = "ENPM808X";
-
-#include <sstream>
 
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
