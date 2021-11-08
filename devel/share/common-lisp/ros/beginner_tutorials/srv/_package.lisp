@@ -1,0 +1,15 @@
+(cl:defpackage beginner_tutorials-srv
+  (:use )
+  (:export
+   "ADDTWONOS"
+   "<ADDTWONOS-REQUEST>"
+   "ADDTWONOS-REQUEST"
+   "<ADDTWONOS-RESPONSE>"
+   "ADDTWONOS-RESPONSE"
+   "CHANGE_STRING"
+   "<CHANGE_STRING-REQUEST>"
+   "CHANGE_STRING-REQUEST"
+   "<CHANGE_STRING-RESPONSE>"
+   "CHANGE_STRING-RESPONSE"
+  ))
+
