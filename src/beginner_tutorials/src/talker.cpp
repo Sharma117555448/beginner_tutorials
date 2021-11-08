@@ -1,8 +1,16 @@
 // Copyright (c) 2021 Charu Sharma
-
+/**
+ * @file talker.cpp
+ * @author Charu Sharma (charu107@umd.edu)
+ * @brief ROS Publisher to publish messages to a topic
+ * @version 0.2
+ * @date 2021-11-08
+ */
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 #include "beginner_tutorials/change_string.h"
+
+// Initializing the string
 extern std::string str = "ENPM808X";
 
 #include <sstream>
@@ -11,8 +19,15 @@ extern std::string str = "ENPM808X";
  * This tutorial demonstrates simple sending of messages over the ROS system.
  */
 
+/**
+ * @brief ROS Service to change the string
+ * @param req Service Request 
+ * @param res Service Response
+ * @return true
+ */
 bool change(beginner_tutorials::change_string::Request &req,
             beginner_tutorials::change_string::Response &res) {
+  // Changing the string
   res.output_string = req.input_string;
   str = res.output_string;
   return true;
@@ -56,6 +71,11 @@ int main(int argc, char **argv) {
    * buffer up before throwing some away.
    */
   ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
+
+  /**
+ * @brief ROS Service
+ * @param change_string service call 
+ */
   ros::ServiceServer service = n.advertiseService("change_string", change);
   int freq = atoi(argv[1]);
   ros::Rate loop_rate(freq);
@@ -78,6 +98,7 @@ int main(int argc, char **argv) {
 
     ROS_INFO("%s ", msg.data.c_str());
 
+    // Adding all five Logging Levels
     for (int i = 1; ros::ok(); i ++) {
       ROS_DEBUG_STREAM("Count begin");
       if ((i % 2) == 0) {
@@ -92,7 +113,6 @@ int main(int argc, char **argv) {
       if ((i % 30) == 0) {
         ROS_FATAL_STREAM(i << " Stats enclosing for each dozen");
       }
-
 
     /**
      * The publish() function is how you send messages. The parameter
