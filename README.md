@@ -63,24 +63,24 @@ rosrun rqt_graph rqt_graph
 ## Run code using launch file
 ## 1. Run roslaunch
 ```
-cd ~/catkin_ws
+cd ~/beginner_tutorials
 catkin_make
 source devel/setup.bash
 roslaunch beginner_tutorials begin_tutorials.launch
 ```
 ## 2. Run roslaunch with arguments
 ```
-roslaunch beginner_tutorials begin_tutorials.launch freq:=<publish_rate>
+roslaunch beginner_tutorials talker_listener.launch freq:=<publish_rate>
 ```
 ## Example:
 ```
-roslaunch beginner_tutorials begin_tutorials.launch freq:=10
+roslaunch beginner_tutorials talker_listener.launch freq:=10
 ```
 
 # ROS Service
 While the nodes are running, open a new terminal and run
 ```
-cd catkin_ws
+cd beginner_tutorials
 source devel/setup.bash
 rosservice call /change_string "input_string: <String of your choice>"
 ```
