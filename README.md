@@ -66,7 +66,7 @@ rosrun rqt_graph rqt_graph
 cd ~/beginner_tutorials
 catkin_make
 source devel/setup.bash
-roslaunch beginner_tutorials begin_tutorials.launch
+roslaunch beginner_tutorials talker_listener.launch
 ```
 ## 2. Run roslaunch with arguments
 ```
